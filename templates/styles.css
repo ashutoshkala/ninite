@@ -1,0 +1,41 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body{
+    background-image: url("one1.jpg");
+    background-size: cover;
+}
+button{
+    color: black;
+}
+/* .form-value{
+    
+    position: relative;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+button{
+    width: 15%;
+    height: 30px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}

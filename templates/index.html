@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=inpu, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.chkbx').click(function(){
+            var text="";
+            $('.chkbx:checked').each(function(){
+                text+=$(this).val();
+            });
+            text=text.substring(0, text.length);
+            $('#selectedtext').val(text);
+            var count=$("[type='checkbox']:checked").length;
+            $('#count').val($("[type='checkbox']:checked").length);
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>Ninenite for mac</h1>
+    <div class="form-value">
+        <form action="/down" method="post" >
+           <div class="chkbx">
+               <ion-icon name="mail-outline"></ion-icon>
+               <input class="chkbx" type="checkbox" value="01">
+               <label for="">chrome </label>
+           </div>
+           <div class="chkbx">
+               <ion-icon name="lock-closed-outline"></ion-icon>
+               <input class="chkbx" type="checkbox" value="02">
+               <label for="">firefox</label>
+           </div> 
+           <div class="chkbx">
+               <label for=""><input class="chkbx" type="checkbox" value="03"> vs code</label>
+           </div>
+           <textarea type='text' name="select" id='selectedtext' placeholder="Selected Checkboxs"></textarea></br> 
+            <input type='text' id='count' placeholder="Number Of Selected Checkboxs">
+           <button>submit</button>
+        </form>
+   </div>
+   <!-- <script>
+
+    var button=document.querySelector("button");
+    var chrome=document.querySelector("#chrome");
+    var firefox=document.querySelector("#firefox");
+    var vs=document.querySelector("#vs");
+
+    button.addEventListener("click",()=>{
+        
+    var obj={
+            name:chrome.value,
+            email:firefox.value,
+            city:vs.value
+        };
+        fetch("/api",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body:JSON.stringify(obj)
+        }).then((r)=>r.json()).then((response)=>console.log(response));
+
+    })
+</script> -->
+
+</body>
+</html>
